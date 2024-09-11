@@ -1,0 +1,17 @@
+[
+    {
+        "image": "src/images/pentlands.webp",
+        "title": "Who We Are",
+        "content": "SMESU Explorer Scouts is your local hub for fun, friendship, and personal growth. We're all about empowering young people and expanding horizons through a thrilling range of activities and international experiences."
+    },
+    {
+        "image": "src/images/maps.webp",
+        "title": "What We Do",
+        "content": "Adventurous activities that fuel your adrenaline and passion for life. Cultural experiences that broaden your perspective and inspire understanding. Skill-building workshops that set you up for success."
+    },
+    {
+        "image": "src/images/smesu-background.webp",
+        "title": "Our Goal?",
+        "content": "To provide development for young people through a thrilling range of activities and eye-opening international experiences. You'll learn new skills, make lifelong friends, and create unforgettable memories!"
+    }
+]

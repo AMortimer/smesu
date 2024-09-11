@@ -1,0 +1,40 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title = "SMESU Explorers" } = Astro.props;
+const year = new Date().getFullYear();
+import BackgroundImage from "../components/BackgroundImage.astro";
+import '../styles/global.css'
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class="wrapper">
+
+				<slot />
+
+			<footer>
+				<small>
+					Copyright © <span id="copyrightYear"
+						>{year}SMESU Edinburgh</span
+					>
+				</small>
+			</footer>
+		</div>
+		<script is:inline>
+			document.getElementById("copyrightYear").innerText =
+				new Date().getFullYear();
+		</script>
+	</body>
+</html>

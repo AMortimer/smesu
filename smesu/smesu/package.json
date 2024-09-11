@@ -1,0 +1,25 @@
+{
+  "name": "smesu",
+  "type": "module",
+  "version": "0.0.1",
+  "browsersList": [
+    "defaults"
+  ],
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^4.13.2",
+    "astro-icon": "^1.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "open-props": "^1.7.5",
+    "postcss": "^8.4.41",
+    "postcss-jit-props": "^1.0.14"
+  }
+}

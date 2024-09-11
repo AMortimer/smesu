@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/*Colours:*/
+:root {
+    --background: 0, 0%, 100%;
+    --text: 0, 0%, 0%;
+    --scouts-blue: 211, 100%, 44%;
+    --scouts-purple: 269, 84%, 47%;
+    --scouts-yellow: 53, 100%, 58%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 120%;
+    }
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.55;
+    max-width: 2000px;
+    margin: auto;
+    background-color: hsl(var(--background));
+    color: hsl(var(--text));
+}
+
+.wrapper {
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+main {
+    display: grid;
+    gap: var(--size-fluid-6);
+    padding: var(--size-fluid-5) var(--size-fluid-2)
+}
+
+.container {
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.container-sm {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container-xs {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+/*Utility classes:*/
+.text-blue {
+    color: hsl(var(--scouts-blue));
+}
+
+.text-white {
+    color: white;
+}
+
+.h1 {
+    font-size: var(--font-size-fluid-2);
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: var(--size-4);
+}
+
+.h2 {
+    font-size: var(--font-size-fluid-1);
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: var(--size-4);
+}
+
+.h3 {
+    font-size: var(--font-size-fluid-0);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+small {
+    font-size: var(--font-size-fluid-00);
+}
+
+.grid-sm {
+    display: grid;
+    place-items: center;
+    gap: var(--size-fluid-1);
+}
+
+.grid-md {
+    display: grid;
+    place-items: center;
+    gap: var(--size-fluid-3);
+}
+
+.grid-lg {
+    display: grid;
+    place-items: center;
+    align-items: center;
+    gap: var(--size-fluid-3);
+}
+
+/*Components*/
+
+/*Button*/
+
+.btn {
+    color: hsl(var(--text));
+    text-decoration: none;
+    padding: var(--size-2) var(--size-fluid-3);
+    border-radius: var(--radius-2);
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.btn--primary {
+    background-color: hsl(var(--scouts-blue));
+    color: white;
+}
+
+.btn--secondary {
+    background-color: hsl(var(--scouts-yellow));
+    color: hsl(var(--text));
+}
+
+.btn--menu {
+    background-color: transparent;
+    border: none;
+    display: grid;
+    place-items: center;
+    padding-inline: var(--size-2);
+}
+
+.btn--menu[aria-expanded="true"] + .nav-links {
+    transform: translateY(0);
+}
+
+/*Nav*/
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--size-fluid-2);
+}
+
+.nav-links,
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: var(--size-3);
+}
+
+.nav-links {
+    flex-direction: column;
+    transform: translateY(-200%);
+    position: absolute;
+    background-color: hsl(var(--background));
+    top: var(--size-fluid-5);
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: var(--size-3);
+    border-bottom: 2px solid hsl(var(--scouts-blue));
+}
+
+li[role="none"],
+.nav-link {
+    width: 100%;
+    display: block;
+    font-size: var(--font-size-1);
+}
+
+.logo {
+    width: calc(var(--size-fluid-8) * 0.75);
+}
+
+@media (min-width: 900px) {
+    .nav-wrapper {
+        gap: var(--size-4);
+    }
+    .btn--menu {
+        display: none;
+    }
+    .nav-links {
+        flex-direction: row;
+        position: static;
+        transform: translateY(0);
+        border: none;
+        padding: 0;
+        inset: initial;
+        background-color: transparent;
+    }
+}
+.hero-background {
+    background-image: url("src/images/smesu-background.webp");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: var(--size-4), 0;
+}
+.hero-textbox {
+    max-width: 50%;
+    padding: var(--size-3) var(--size-3);
+    margin: var(--size-8);
+    background-color: hsl(var(--scouts-blue), 0.6);
+    color: white;
+    align-content: center;
+    gap: var(--size-4);
+    border-radius: var(--radius-2);
+}
+
+.about-us {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+    gap: var(--size-2);
+}
+
+.about {
+    flex: 1 1 300px;
+    display: grid;
+    gap: var(--size-2);
+}
+
+footer {
+    display: grid;
+    place-items: center;
+    padding: var(--size-2);
+    background-color: var(--scouts-purple);
+    color: white;
+}
