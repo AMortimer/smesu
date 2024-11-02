@@ -1,22 +1,32 @@
 ---
 import data from '../data/about-us.json';
 ---
-<section class="about-us container-sm">
-    {
-        data.map(about => (
-            <div class="about">
-                <div>
-                    <img src={about.image} alt="">
+<section id="about-us">
+    <h2>About Us</h2>
+    <div class="about-us container-sm">
+        {
+            data.map(about => (
+                <div class="about">
+                    <div>
+                        <img class="card-image" src={about.image} alt="">
+                    </div>
+                    <div class="card-text">
+                        <h3>
+                            {about.title}
+                        </h3>
+                        <p>
+                            {about.content}
+                        </p>
+                    </div>
                 </div>
-                <div>
-                    <h3>
-                        {about.title}
-                    </h3>
-                    <p>
-                        {about.content}
-                    </p>
-                </div>
-            </div>
-        ))
-    }
+            ))
+        }
+    </div>
+    <div class="container-sm image-banner">
+        <div class="banner-text">
+        <h2>Where we are</h2>
+        <h3>You can find us in the heart of beautiful Edinburgh, Scotland.</h3>
+        <p>We meet in the Fairmilehead area of Edinburgh, but you'll often find us out and about - around the city, the country, or the world...</p>
+    </div>
+</div>
 </section>
