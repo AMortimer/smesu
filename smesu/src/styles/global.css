@@ -242,7 +242,7 @@ li[role="none"],
     }
 }
 .hero-background {
-    background-image: url("src/images/smesu-background.webp");
+    background-image: url("/images/smesu-background.webp");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -297,7 +297,7 @@ li[role="none"],
 .image-banner {
     width: 100%;
     height: auto;
-    background-image: url("src/images/banner-map.webp");
+    background-image: url("/images/banner-map.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
