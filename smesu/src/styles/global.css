@@ -60,7 +60,7 @@ li {
 
 main {
     display: grid;
-    gap: var(--size-fluid-7);
+    gap: var(--size-fluid-5);
     padding: var(--size-fluid-5) var(--size-fluid-2)
 }
 
@@ -257,7 +257,7 @@ li[role="none"],
     color: white;
     align-content: center;
     line-height: var(--size-10);
-    border-radius: var(--radius-2);
+    /* border-radius: var(--radius-2); */
 }
 
 @media (max-width: 900px) {
@@ -303,7 +303,7 @@ li[role="none"],
     background-size: cover;
     filter: grayscale(60%);
     padding: var(--size-4), 0;
-    border-radius: var(--radius-2);
+    /* border-radius: var(--radius-2); */
 }
 
 .banner-text {
@@ -313,7 +313,7 @@ li[role="none"],
     text-align: center;
     max-width: 100%;
     background-color: hsl(var(--text), 0.8);
-    border-radius: var(--radius-2);
+    /* border-radius: var(--radius-2); */
 }
 
 .text-box {
