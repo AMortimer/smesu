@@ -1,9 +1,9 @@
 ---
 import data from '../data/about-us.json';
 ---
-<section id="about-us">
+<section id="about-us" class="container">
     <h2>About Us</h2>
-    <div class="about-us container-sm">
+    <div class="about-us">
         {
             data.map(about => (
                 <div class="about">
@@ -22,7 +22,7 @@ import data from '../data/about-us.json';
             ))
         }
     </div>
-    <div class="container-sm image-banner">
+    <div class="image-banner">
         <div class="banner-text">
         <h2>Where we are</h2>
         <h3>You can find us in the heart of beautiful Edinburgh, Scotland.</h3>
